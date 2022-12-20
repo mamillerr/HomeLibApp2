@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v5c-W2-L4O">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="IuL-SD-6R4">
+            <objects>
+                <viewController id="v5c-W2-L4O" customClass="MenuViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pbX-fs-BvH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="YmT-Yk-JOw">
+                                <rect key="frame" x="60.333333333333343" y="251" width="272.33333333333326" height="350"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9b-r8-aq1" userLabel="YourList">
+                                        <rect key="frame" x="0.0" y="0.0" width="272.33333333333331" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Bc6-FS-Scf">
+                                                <rect key="frame" x="0.0" y="-1.3333333333333321" width="50" height="52"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="SFt-aZ-9YN"/>
+                                                </constraints>
+                                                <imageReference key="image" image="list.bullet.clipboard.fill" catalog="system" symbolScale="default"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYJ-n5-SDO">
+                                                <rect key="frame" x="49.999999999999986" y="0.0" width="222.33333333333331" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Ваш список книг">
+                                                    <fontDescription key="titleFontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="OgY-TG-1vS" kind="presentation" modalPresentationStyle="fullScreen" id="BaX-QP-DmC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="xXK-Vp-z1w"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dwh-G4-f2Z" userLabel="Search">
+                                        <rect key="frame" x="0.0" y="100" width="272.33333333333331" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Iv1-Yt-3OU">
+                                                <rect key="frame" x="0.0" y="-2" width="50" height="54.666666666666664"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="89I-uB-nkp"/>
+                                                </constraints>
+                                                <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fi-PU-Izv">
+                                                <rect key="frame" x="49.999999999999986" y="0.0" width="222.33333333333331" height="50"/>
+                                                <state key="normal" title="Button" image="magnifyingglass" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Поиск">
+                                                    <fontDescription key="titleFontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="fZu-l9-Hbj" kind="presentation" id="N1a-sp-YhR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="jqZ-96-Vck"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiK-LY-P0t" userLabel="YourList">
+                                        <rect key="frame" x="0.0" y="200" width="272.33333333333331" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="aQP-xt-6Hr">
+                                                <rect key="frame" x="0.0" y="-1.3333333333333321" width="50" height="52"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="0jf-jB-Yf4"/>
+                                                </constraints>
+                                                <imageReference key="image" image="list.bullet.clipboard" catalog="system" symbolScale="default"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzj-HJ-0KX">
+                                                <rect key="frame" x="49.999999999999986" y="0.0" width="222.33333333333331" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Хочу прочитать">
+                                                    <fontDescription key="titleFontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="k5e-vX-L9b" kind="presentation" id="rAy-iM-jmG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3gq-Hq-9pP"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TwI-vQ-H6B" userLabel="Favourite">
+                                        <rect key="frame" x="0.0" y="300" width="272.33333333333331" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JxG-N7-KSG">
+                                                <rect key="frame" x="0.0" y="-0.33333333333333215" width="50" height="49.666666666666657"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="vl2-LN-G4u"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W63-WG-2gb">
+                                                <rect key="frame" x="49.999999999999986" y="0.0" width="222.33333333333331" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Избранное">
+                                                    <fontDescription key="titleFontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="l5z-Vc-7eY" kind="presentation" modalPresentationStyle="fullScreen" id="rtM-WV-qWu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fAX-Iz-rGe"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="tintColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="pFf-MG-GH2"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="МЕНЮ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDk-KT-MHE">
+                                <rect key="frame" x="16" y="65" width="361" height="32"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fIG-5F-3PQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PDk-KT-MHE" firstAttribute="leading" secondItem="fIG-5F-3PQ" secondAttribute="leading" constant="16" id="2gr-3y-rJg"/>
+                            <constraint firstItem="PDk-KT-MHE" firstAttribute="top" secondItem="fIG-5F-3PQ" secondAttribute="top" constant="6" id="DSd-Ir-RaX"/>
+                            <constraint firstItem="fIG-5F-3PQ" firstAttribute="trailing" secondItem="PDk-KT-MHE" secondAttribute="trailing" constant="16" id="DyI-Fs-W8e"/>
+                            <constraint firstItem="YmT-Yk-JOw" firstAttribute="centerX" secondItem="pbX-fs-BvH" secondAttribute="centerX" id="hwd-NI-1q0"/>
+                            <constraint firstItem="YmT-Yk-JOw" firstAttribute="centerY" secondItem="pbX-fs-BvH" secondAttribute="centerY" id="ve9-wn-LA9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l8g-y8-3gC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="-792"/>
+        </scene>
+        <!--Ваша библиотека-->
+        <scene sceneID="71e-G7-9hA">
+            <objects>
+                <tableViewController id="oGe-Zb-dD2" customClass="LibViewController" customModule="HomeLibApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5gb-yN-5rm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="book" textLabel="j5D-0c-40M" detailTextLabel="dAW-MG-qhE" style="IBUITableViewCellStyleSubtitle" id="7mu-pB-XWO">
+                                <rect key="frame" x="0.0" y="50" width="393" height="68.666664123535156"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7mu-pB-XWO" id="GsR-xX-YSc">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="68.666664123535156"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j5D-0c-40M">
+                                            <rect key="frame" x="20.000000000000004" y="8.3333333333333339" width="60.333333333333336" height="22.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dAW-MG-qhE">
+                                            <rect key="frame" x="19.999999999999993" y="34.666666666666671" width="96.333333333333329" height="22.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="xYn-qy-kgc" kind="show" id="esm-jG-yiT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oGe-Zb-dD2" id="0nZ-RU-Wyt"/>
+                            <outlet property="delegate" destination="oGe-Zb-dD2" id="3FH-Nc-oOM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Ваша библиотека" id="dZn-di-crd">
+                        <barButtonItem key="leftBarButtonItem" title="back" image="chevron.backward.2" catalog="system" id="UCT-y8-avb">
+                            <connections>
+                                <action selector="backButton:" destination="oGe-Zb-dD2" id="sbM-cL-RU8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uxh-zJ-LB2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752" y="23"/>
+        </scene>
+        <!--Add New Book View Controller-->
+        <scene sceneID="MiD-4q-Gi8">
+            <objects>
+                <viewController id="vX4-sy-3dr" customClass="AddNewBookViewController" customModule="HomeLibApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tu0-WD-FZi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vHc-nr-X3W">
+                                <rect key="frame" x="16" y="96" width="361" height="76"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Название" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="76F-ua-VRH">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldChanged:" destination="vX4-sy-3dr" eventType="editingDidEnd" id="seA-6k-LgZ"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Автор" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2KO-1C-lZj">
+                                        <rect key="frame" x="0.0" y="42" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldChanged:" destination="vX4-sy-3dr" eventType="editingChanged" id="YTb-bZ-wop"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h1X-yN-a40"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="h1X-yN-a40" firstAttribute="trailing" secondItem="vHc-nr-X3W" secondAttribute="trailing" constant="16" id="hj7-Cy-N3M"/>
+                            <constraint firstItem="vHc-nr-X3W" firstAttribute="top" secondItem="h1X-yN-a40" secondAttribute="top" constant="40" id="o1L-YY-e8n"/>
+                            <constraint firstItem="vHc-nr-X3W" firstAttribute="leading" secondItem="h1X-yN-a40" secondAttribute="leading" constant="16" id="oOE-mz-4B8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PGH-Xd-R6h">
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="NGN-V7-ezH">
+                            <connections>
+                                <segue destination="z6B-9u-K8o" kind="unwind" identifier="saveSegue" unwindAction="unwindSegueWithSegue:" id="2Sh-3W-WiA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="authorTF" destination="2KO-1C-lZj" id="xpB-2l-rSq"/>
+                        <outlet property="nameTF" destination="76F-ua-VRH" id="Ekm-4I-NPe"/>
+                        <outlet property="saveButton" destination="NGN-V7-ezH" id="q0d-9H-guW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I7N-0J-B95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="z6B-9u-K8o" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3607" y="763"/>
+        </scene>
+        <!--Избранные книги-->
+        <scene sceneID="kic-e8-D49">
+            <objects>
+                <tableViewController id="AUX-Po-s9v" customClass="FavouriteBooksViewController" customModule="HomeLibApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dHR-XN-eUh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favouriteBook" textLabel="R8p-Wv-HHy" detailTextLabel="N2h-A2-RnH" style="IBUITableViewCellStyleSubtitle" id="653-dT-yM4">
+                                <rect key="frame" x="0.0" y="50" width="393" height="68.666664123535156"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="653-dT-yM4" id="FpD-ns-gj4">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="68.666664123535156"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R8p-Wv-HHy">
+                                            <rect key="frame" x="20.000000000000004" y="8.3333333333333339" width="60.333333333333336" height="22.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N2h-A2-RnH">
+                                            <rect key="frame" x="19.999999999999993" y="34.666666666666671" width="96.333333333333329" height="22.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AUX-Po-s9v" id="rLV-fw-o5f"/>
+                            <outlet property="delegate" destination="AUX-Po-s9v" id="wiI-pT-OT5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Избранные книги" id="8BR-PQ-nRQ">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward.2" catalog="system" id="jY2-2s-p4R">
+                            <connections>
+                                <action selector="backButton:" destination="AUX-Po-s9v" id="2LV-Dx-N9d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dpr-kC-PE9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5445.0381679389311" y="15.492957746478874"/>
+        </scene>
+        <!--Хочу прочитать-->
+        <scene sceneID="ssW-Od-Av8">
+            <objects>
+                <tableViewController id="J19-T5-wGV" customClass="WannaReadTableViewController" customModule="HomeLibApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="ULU-cc-Ihi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell3" textLabel="o7s-IV-5Ym" detailTextLabel="ars-vz-Bgl" style="IBUITableViewCellStyleSubtitle" id="FrE-Ue-euW">
+                                <rect key="frame" x="0.0" y="50" width="393" height="68.666664123535156"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FrE-Ue-euW" id="72a-J8-XGE">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="68.666664123535156"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o7s-IV-5Ym">
+                                            <rect key="frame" x="20.000000000000004" y="8.3333333333333339" width="60.333333333333336" height="22.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ars-vz-Bgl">
+                                            <rect key="frame" x="19.999999999999993" y="34.666666666666671" width="96.333333333333329" height="22.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="J19-T5-wGV" id="nw6-P6-1BL"/>
+                            <outlet property="delegate" destination="J19-T5-wGV" id="NgL-xc-OIk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Хочу прочитать" id="FUb-1G-a05">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kBB-6O-kD3">
+                            <connections>
+                                <segue destination="WlJ-Ah-Dlc" kind="presentation" identifier="saveSegue" id="0zc-J8-zYM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNl-9R-eiz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3605" y="23"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sn4-1l-d3N">
+            <objects>
+                <navigationController id="k5e-vX-L9b" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Th-Ue-tnI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="J19-T5-wGV" kind="relationship" relationship="rootViewController" id="9LV-RO-gLq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0HH-Sm-dUZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2698" y="23"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LxT-56-GYY">
+            <objects>
+                <navigationController id="l5z-Vc-7eY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oHu-fm-dpc">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AUX-Po-s9v" kind="relationship" relationship="rootViewController" id="i9n-iC-tUL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZ7-5Q-NhH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4545.801526717557" y="15.492957746478874"/>
+        </scene>
+        <!--Book Info View Controller-->
+        <scene sceneID="NdL-m6-jXf">
+            <objects>
+                <viewController id="xYn-qy-kgc" customClass="BookInfoViewController" customModule="HomeLibApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YB5-rh-17s">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wfb-Vk-ZIG">
+                                <rect key="frame" x="16" y="105" width="133" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="hmq-Kd-Deg">
+                                <rect key="frame" x="16" y="352" width="361" height="466"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zyz-6a-5xw">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="60.333333333333336"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Автор" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqH-Ke-Ice">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="29.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="26"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWm-m7-0pE">
+                                                <rect key="frame" x="0.0" y="37.666666666666686" width="361" height="22.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kpJ-Bo-QLN">
+                                        <rect key="frame" x="0.0" y="84.333333333333314" width="361" height="60.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Издатель" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvg-wb-TJ9">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="29.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="26"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gl-xS-Eaj">
+                                                <rect key="frame" x="0.0" y="37.666666666666686" width="361" height="22.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zle-Am-IKO">
+                                        <rect key="frame" x="0.0" y="168.66666666666663" width="361" height="60.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Жанр" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7P-ws-ffz">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="29.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="26"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAb-cK-CwK">
+                                                <rect key="frame" x="0.0" y="37.666666666666742" width="361" height="22.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6vi-27-hcl">
+                                        <rect key="frame" x="0.0" y="253.00000000000003" width="361" height="60.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статус чтения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R36-2F-4eP">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="29.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="26"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1Y-bo-2p6">
+                                                <rect key="frame" x="0.0" y="37.666666666666629" width="361" height="22.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="un4-oJ-9rw">
+                                        <rect key="frame" x="0.0" y="337.33333333333337" width="361" height="52.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расположение" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kj6-dh-67m">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="29.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="26"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVU-SK-kSk" userLabel="Location Label">
+                                                <rect key="frame" x="0.0" y="29.666666666666629" width="361" height="22.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bYu-hx-vfE">
+                                        <rect key="frame" x="0.0" y="413.66666666666663" width="361" height="52.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Переводчик" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbL-7U-w3T" userLabel="Переводчик">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="29.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="26"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiF-TF-ktS" userLabel="Translator Label">
+                                                <rect key="frame" x="0.0" y="29.666666666666742" width="361" height="22.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Название" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iu5-Zv-bSw">
+                                <rect key="frame" x="167" y="144" width="200" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="27"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KZP-rD-CcU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="KZP-rD-CcU" firstAttribute="trailing" secondItem="hmq-Kd-Deg" secondAttribute="trailing" constant="16" id="On4-YM-z2y"/>
+                            <constraint firstItem="hmq-Kd-Deg" firstAttribute="top" secondItem="KZP-rD-CcU" secondAttribute="top" constant="248.99999999999989" id="QLn-4f-a4D"/>
+                            <constraint firstItem="hmq-Kd-Deg" firstAttribute="leading" secondItem="KZP-rD-CcU" secondAttribute="leading" constant="16" id="b55-yo-k8z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GV9-k0-hT3"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="BWm-m7-0pE" id="luz-vB-Jh2"/>
+                        <outlet property="genreLabel" destination="YAb-cK-CwK" id="7iv-Bk-2Iq"/>
+                        <outlet property="image" destination="wfb-Vk-ZIG" id="wQU-LP-jcV"/>
+                        <outlet property="locationLabel" destination="UVU-SK-kSk" id="eDW-oz-Vms"/>
+                        <outlet property="pubHouseLabel" destination="4gl-xS-Eaj" id="pOc-1N-VTb"/>
+                        <outlet property="statusLabel" destination="a1Y-bo-2p6" id="gEH-a6-90N"/>
+                        <outlet property="titleLabel" destination="Iu5-Zv-bSw" id="Nz1-HZ-ou2"/>
+                        <outlet property="translatorLabel" destination="BiF-TF-ktS" id="Uo8-14-ckc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n1I-Wa-oAT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1707.6335877862596" y="762.67605633802816"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="LA3-2h-c4j">
+            <objects>
+                <tableViewController id="fZu-l9-Hbj" customClass="SearchViewController" customModule="HomeLibApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="rxY-cs-JBf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="POx-B9-Fw1">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="fZu-l9-Hbj" id="X8j-ic-emB"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchedCell" textLabel="l1R-0C-xOb" detailTextLabel="flg-Qi-kgM" style="IBUITableViewCellStyleSubtitle" id="FKN-L6-fgO">
+                                <rect key="frame" x="0.0" y="94" width="393" height="68.666664123535156"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FKN-L6-fgO" id="Fl7-ys-YSs">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="68.666664123535156"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l1R-0C-xOb">
+                                            <rect key="frame" x="20.000000000000004" y="8.3333333333333339" width="60.333333333333336" height="22.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="flg-Qi-kgM">
+                                            <rect key="frame" x="19.999999999999993" y="34.666666666666671" width="96.333333333333329" height="22.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="xYn-qy-kgc" kind="presentation" modalPresentationStyle="fullScreen" id="THE-Us-cPz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fZu-l9-Hbj" id="brr-FL-Z7o"/>
+                            <outlet property="delegate" destination="fZu-l9-Hbj" id="GaU-Tq-iX4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="UBD-9B-ldT">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward.2" catalog="system" id="IKI-Db-f94">
+                            <connections>
+                                <action selector="backButton:" destination="fZu-l9-Hbj" id="D4v-ga-So6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HED-CU-kTr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-212" y="23"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j3D-ys-UCN">
+            <objects>
+                <navigationController id="cTe-mc-J0O" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LbT-dn-wbF">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fZu-l9-Hbj" kind="relationship" relationship="rootViewController" id="L7W-VP-k5z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scn-D3-4Mc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1117" y="23"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Oci-uN-AYn">
+            <objects>
+                <navigationController id="OgY-TG-1vS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Dc-ca-52G">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oGe-Zb-dD2" kind="relationship" relationship="rootViewController" id="O4u-C4-2Ac"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eg4-DQ-8bJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="23"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FGP-Qx-R7F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WlJ-Ah-Dlc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x0q-8P-8cm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vX4-sy-3dr" kind="relationship" relationship="rootViewController" id="VAS-a4-n0W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PVU-q3-sY9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2697" y="763"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="N1a-sp-YhR"/>
+        <segue reference="esm-jG-yiT"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="chevron.backward.2" catalog="system" width="128" height="108"/>
+        <image name="list.bullet.clipboard" catalog="system" width="103" height="128"/>
+        <image name="list.bullet.clipboard.fill" catalog="system" width="103" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
